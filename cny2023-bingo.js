@@ -114,8 +114,7 @@ function refreshLetters() {
     for (let p = winningIterator; p < 5; p++) letter[p].classList.remove("show-bingo");
 
     if(winningIterator === 5) {
-        alert('HUAT ah 🧧! Raise your hand and show the game master your bingo sheet!')
-        location.reload();
+        alert('HUAT ah 🧧! Raise your hand and show the game master your bingo sheet!');
     }
 }
 
