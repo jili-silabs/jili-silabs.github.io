@@ -3,8 +3,8 @@ body {
     padding: 0;
     padding-top: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: red;
-    color: yellow;
+    background-color: #900000;
+    color: #FCDA53;
     text-align: center;
 }
 
@@ -37,12 +37,12 @@ body:focus {
     justify-content: center;
     align-items: center;
     border-radius: 20%;
-    border: 2px solid yellow;
+    border: 2px solid #FCDA53;
 }
 
 .cell-format:hover {
-    background-color: yellow;
-    color: red;
+    background-color: #FCDA53;
+    color: #900000;
 }
 
 .letter-div {
@@ -61,13 +61,13 @@ body:focus {
 .strickout {
     /* original */
     /* text-decoration: line-through; */
-    color: red;
+    color: #900000;
     /* font-size: 24pt; */
     /* pointer-events: none; */
     /* added */
     border-radius: 20%;
-    border: 2px solid yellow;
-    background-color: yellow;
+    border: 2px solid #FCDA53;
+    background-color: #FCDA53;
     /* font-weight: bold; */
 }
 
