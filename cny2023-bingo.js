@@ -38,20 +38,26 @@ function shuffle(arr) {
 
 let iterator = 0;
 
+var arr_new = [];
+while(arr_new.length < 25){
+    var r = Math.floor(Math.random() * 100) + 1;
+    if((arr_new.indexOf(r) === -1) && (r != 0)) arr_new.push(r);
+}
+
 for (i = 0; i < 5; i++) {
     let tr = document.createElement("tr")
     table.appendChild(tr)
 
     for (j = 0; j < 5; j++) {
         let td = document.createElement("td")
-        td.id = arr[iterator].toString()
+        td.id = arr_new[iterator].toString()
         td.style.height = "20%"
         td.style.width = "20%"
         td.classList.add("main-table-cell")
 
         let div = document.createElement("div")
         div.classList.add("cell-format")
-        div.textContent = arr[iterator].toString()
+        div.textContent = arr_new[iterator].toString()
         td.appendChild(div)
         tr.appendChild(td)
         iterator++;
