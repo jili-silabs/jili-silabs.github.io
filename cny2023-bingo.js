@@ -115,7 +115,7 @@ function refreshLetters() {
             winningIterator++;
         }
     }
-    console.log(winningIterator);
+    // console.log(winningIterator);
 
     for (let p = winningIterator; p < 5; p++) letter[p].classList.remove("show-bingo");
 
