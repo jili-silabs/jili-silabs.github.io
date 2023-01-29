@@ -41,7 +41,7 @@ let iterator = 0;
 var arr_new = [];
 while(arr_new.length < 25){
     var r = Math.floor(Math.random() * 100) + 1;
-    if((arr_new.indexOf(r) === -1) && (r != 0) && (r != 100)) arr_new.push(r);
+    if((arr_new.indexOf(r) === -1) && (r > 0) && (r < 91)) arr_new.push(r);
 }
 
 for (i = 0; i < 5; i++) {
