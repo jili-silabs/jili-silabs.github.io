@@ -15,10 +15,14 @@ const winningPositions = [
     [1, 6, 11, 16, 21],
     [2, 7, 12, 17, 22],
     [3, 8, 13, 18, 23],
-    [4, 9, 14, 19, 24]
+    [4, 9, 14, 19, 24],
+    // diagonal
+    [0, 6, 12, 18, 24],
+    [4, 8, 12, 16, 20]
 ]
 
 let arr = Array.apply(null, { length: 26 }).map(Number.call, Number);
+let game_win = 0;
 
 arr.shift()
 shuffle(arr);
@@ -98,10 +102,10 @@ function matchWin() {
 }
 
 function refreshLetters() {
-    let winningIterator = 0
+    let win = 0
     const cell = document.querySelectorAll(".cell-format");
 
-    for (let m = 0; m < 10; m++) {
+    for (let m = 0; m < 12; m++) {
         // Iterate over each winningPosition (10 of them)
         let ite = 0;
 
@@ -110,18 +114,19 @@ function refreshLetters() {
             if (cell[cell_number_arr[n]].classList.contains("strickout")) ite++;
         }
 
-        if (ite === 5) {
-            letter[winningIterator].classList.add("show-bingo");
-            winningIterator++;
-        }
+        if (ite === 5) win = 1;
     }
     // console.log(winningIterator);
 
-    for (let p = winningIterator; p < 5; p++) letter[p].classList.remove("show-bingo");
-
-    if(winningIterator === 5) {
-        alert('HUAT ah 🧧! Raise your hand and show the game master your bingo sheet!');
+    if (win === 1) {
+        for (let p = 0; p < 5; p++) letter[p].classList.add("show-bingo");
+        if (game_win === 0) alert('HUAT ah 🧧! Raise your hand and and a game master will come over to check your bingo sheet!');
+        game_win = 1;
+    } else {
+        for (let p = 0; p < 5; p++) letter[p].classList.remove("show-bingo");
+        game_win = 0;
     }
+
 }
 
 
