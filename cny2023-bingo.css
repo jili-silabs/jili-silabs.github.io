@@ -40,10 +40,10 @@ body:focus {
     border: 2px solid #FCDA53;
 }
 
-.cell-format:hover {
+/* .cell-format:hover {
     background-color: #FCDA53;
     color: #900000;
-}
+} */
 
 .letter-div {
     height: 20vh;
